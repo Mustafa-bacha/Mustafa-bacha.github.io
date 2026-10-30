@@ -15,10 +15,10 @@ Before Osol, I was a **Research Intern at BIOMISA Lab, NUST**, building clinical
 
 Research interests
 ======
-* **Speech & generative AI:** voice cloning, TTS accent adaptation, LLMs, RAG, and agentic systems. My thesis work adapts a 520M-parameter TTS model to South Asian English with LoRA, training only ~0.1% of weights ([manuscript](/publication/2026-06-01-voice-cloning-lora)).
-* **Efficient & trustworthy ML:** model quantization (INT8/INT4), parameter-efficient fine-tuning, model compression, and what these optimizations do to calibration and reliability especially in clinical settings ([ongoing audit](https://github.com/Mustafa-bacha/pcg-quant-audit)).
-* **Medical AI:** clinical documentation pipelines, physiological time-series modeling, risk stratification, and data-driven medical decision making.
-* **Computer vision & perception:** real-time detection and localization on edge hardware, vision-language models, and interpretability.
+* **Speech & generative AI:** Voice cloning, TTS accent adaptation, LLMs, RAG, and agentic systems. My thesis work adapts a 520M-parameter TTS model to South Asian English with LoRA, training only ~0.1% of weights ([manuscript](/publication/2026-06-01-voice-cloning-lora)).
+* **Efficient & trustworthy ML:** Model quantization (INT8/INT4), parameter-efficient fine-tuning, model compression, and what these optimizations do to calibration and reliability especially in clinical settings ([ongoing audit](https://github.com/Mustafa-bacha/pcg-quant-audit)).
+* **Medical AI:** Clinical documentation pipelines, physiological time-series modeling, risk stratification, and data-driven medical decision making.
+* **Computer vision & perception:** Real-time detection and localization on edge hardware, vision-language models, and interpretability.
 
 I am seeking **graduate research positions (MS/PhD)** and **research-driven ML engineering roles**. [Download my CV](/files/Mustafa_Shah_CV.pdf).
 
