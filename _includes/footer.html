@@ -1,24 +1,81 @@
 {% include base_path %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-    {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endif %}
-  </ul>
-</div>
-{% endif %}
-
 <div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
 </div>
+
+<!-- Floating social buttons — bottom-right corner -->
+<div class="fab-cluster">
+  {% if site.author.github %}
+  <a href="https://github.com/{{ site.author.github }}" class="fab-btn fab-github" aria-label="GitHub" target="_blank" rel="noopener">
+    <i class="fab fa-github" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+  {% if site.author.linkedin %}
+  <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="fab-btn fab-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+  <button class="fab-btn fab-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</div>
+
+<style>
+.fab-cluster {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 1000;
+}
+.fab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  color: #fff;
+  text-decoration: none;
+}
+.fab-github  { background: #24292e; }
+.fab-linkedin { background: #0077b5; }
+.fab-top {
+  background: #494e52;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fab-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+</style>
+
+<script>
+(function() {
+  var btn = document.querySelector('.fab-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+})();
+</script>
