@@ -1,21 +1,21 @@
 # mustafa-bacha.github.io
 
-Personal portfolio website of **Muhammad Mustafa Shah** — Machine Learning researcher & engineer.
+Personal academic portfolio of **Muhammad Mustafa Shah** — AI/ML & Medical AI researcher and engineer.
 
-Live at: https://mustafa-bacha.github.io/
+Live at: **https://mustafa-bacha.github.io/**
 
-- Research: multimodal & generative AI, parameter-efficient fine-tuning (LoRA/PEFT), edge AI & quantization, ML for healthcare, reinforcement learning.
-- Built as a dependency-free static site (HTML/CSS/JS) deployed on GitHub Pages.
+Built with the [Academic Pages](https://github.com/academicpages/academicpages.github.io) Jekyll template (MIT-licensed fork of Minimal Mistakes), deployed via GitHub Actions to GitHub Pages.
 
-## Structure
+## Editing
 
-```
-index.html    — single-page portfolio
-styles.css    — theming (light/dark), layout
-script.js     — theme toggle, mobile nav
-assets/       — CV and paper PDFs
-```
+| What | Where |
+|---|---|
+| Site/author config (sidebar, links) | `_config.yml` |
+| Landing page / news | `_pages/about.md` |
+| CV page | `_pages/cv.md` (PDF in `files/`) |
+| Publications | `_publications/*.md` |
+| Talks | `_talks/*.md` |
+| Projects | `_portfolio/*.md` |
+| Top navigation | `_data/navigation.yml` |
 
-## Updating
-
-Edit `index.html`, commit, and push to `main` — GitHub Pages redeploys automatically.
+Commit to `main` and the site redeploys automatically (Actions → "Deploy Academic Pages template site to Pages").
