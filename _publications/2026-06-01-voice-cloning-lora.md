@@ -3,7 +3,7 @@ title: "Parameter-Efficient Voice Cloning for South Asian English via LoRA Fine-
 collection: publications
 category: manuscripts
 permalink: /publication/2026-06-01-voice-cloning-lora
-excerpt: 'We curate a 577-speaker South Asian English corpus and adapt a 520M-parameter Llama-backbone TTS system with LoRA adapters on 210 transformer projections — training only ~0.1% of weights on under 40 minutes of audio. Speaker similarity improves by 5.06% and the zero-shot baseline&apos;s inverse pitch correlation is reversed, with zero added inference cost after adapter merging.'
+excerpt: 'We curate a 577-speaker South Asian English corpus and adapt a 520M-parameter Llama-backbone TTS system with LoRA adapters on 210 transformer projections training only ~0.1% of weights on under 40 minutes of audio. Speaker similarity improves by 5.06% and the zero-shot baseline&apos;s inverse pitch correlation is reversed, with zero added inference cost after adapter merging.'
 date: 2026-06-01
 venue: 'Undergraduate thesis manuscript, GIKI (in preparation for submission)'
 paperurl: 'https://mustafa-bacha.github.io/files/voice_cloning_lora_tts.pdf'
